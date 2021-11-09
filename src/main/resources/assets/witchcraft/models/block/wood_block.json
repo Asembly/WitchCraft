@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "north": "witchcraft:blocks/wood_block_side",
+    "south": "witchcraft:blocks/wood_block_side",
+    "west": "witchcraft:blocks/wood_block_side",
+    "east": "witchcraft:blocks/wood_block_side",
+    "up": "witchcraft:blocks/wood_block_up",
+    "down": "witchcraft:blocks/wood_block_up"
+  }
+}
