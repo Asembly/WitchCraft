@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "  ",
+    " x ",
+    "  "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "type": "forge:item",
+      "aura_wood": "wood_aura_block"
+    }
+  },
+  "result":
+  {
+    "item": "witchcraft:item/living_stick",
+    "count": 9
+  }
+}
