@@ -1,0 +1,10 @@
+[
+{
+  "modid": "${modid}",
+  "name": "${name}",
+  "description": "This is magic mod based on nature power",
+  "version": "${version}",
+  "mcversion": "${acceptedMinecraftVersions}",
+  "authorList": ["Asembly"],
+}
+]
