@@ -15,4 +15,5 @@ public class StaffOfLife extends ItemTool {
         super(STAFF_OF_LIFE,EFFECTIVE_ON);
         setCreativeTab(WITCH_CRAFT_TAB);
     }
+
 }

@@ -8,7 +8,9 @@ import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import witchcraft.common.blocks.WoodAuraBlock;
 import witchcraft.common.blocks.WoodBlock;
+import witchcraft.common.blocks.WoodDeadBlock;
 import witchcraft.common.items.armors.DruidBoots;
 import witchcraft.common.items.armors.DruidChest;
 import witchcraft.common.items.armors.DruidHelm;
@@ -16,7 +18,7 @@ import witchcraft.common.items.armors.DruidLegs;
 import witchcraft.common.items.tools.*;
 import witchcraft.until.UntilRegistrarHandler;
 import static witchcraft.WitchCraft.MOD_ID;
-import static witchcraft.common.InitBlocks.WOOD_BLOCK;
+import static witchcraft.common.InitBlocks.*;
 import static witchcraft.common.InitMaterial.*;
 
 @Mod.EventBusSubscriber(modid = MOD_ID)
@@ -35,7 +37,9 @@ public class RegistrarHandler {
                 UntilRegistrarHandler.registerNameItem(new LivingHoe(HOE_MATERIAL),"live_hoe"),
         };
         Item[] blockItems = {
-                new ItemBlock(WOOD_BLOCK).setRegistryName(WOOD_BLOCK.getRegistryName())
+                new ItemBlock(WOOD_BLOCK).setRegistryName(WOOD_BLOCK.getRegistryName()),
+                new ItemBlock(WOOD_AURA_BLOCK).setRegistryName(WOOD_AURA_BLOCK.getRegistryName()),
+                new ItemBlock(WOOD_DEAD_BLOCK).setRegistryName(WOOD_DEAD_BLOCK.getRegistryName())
         };
         event.getRegistry().registerAll(items);
         event.getRegistry().registerAll(blockItems);
@@ -43,7 +47,9 @@ public class RegistrarHandler {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block>event){
         Block[]blocks = {
-                UntilRegistrarHandler.registerNameBlock(new WoodBlock(WOOD_BLOCK_MATERIAL),"wood_block")
+                UntilRegistrarHandler.registerNameBlock(new WoodBlock(WOOD_BLOCK_MATERIAL),"wood_block"),
+                UntilRegistrarHandler.registerNameBlock(new WoodAuraBlock(WOOD_BLOCK_MATERIAL),"wood_aura_block"),
+                UntilRegistrarHandler.registerNameBlock(new WoodDeadBlock(WOOD_BLOCK_MATERIAL),"wood_dead_block")
         };
         event.getRegistry().registerAll(blocks);
     }

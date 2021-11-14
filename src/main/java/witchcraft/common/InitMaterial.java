@@ -3,9 +3,9 @@ package witchcraft.common;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
-import net.minecraftforge.client.event.RenderTooltipEvent;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class InitMaterial {
@@ -15,7 +15,7 @@ public class InitMaterial {
             "taum_material", "witchcraft",16,new int[]{5,10,20,30},
             15, SoundEvents.ITEM_ARMOR_EQUIP_IRON,0);
 
-    public static final Material WOOD_BLOCK_MATERIAL = new Material(MapColor.BROWN);
+    public static final Material WOOD_BLOCK_MATERIAL = new Material(MapColor.getBlockColor(EnumDyeColor.BROWN));
 
     public static final Item.ToolMaterial STAFF_OF_LIFE = EnumHelper.addToolMaterial("staff_material",0,150,10,4,5);
     public static final Item.ToolMaterial AXE_MATERIAL = EnumHelper.addToolMaterial("axe_material",0,150,10,6,5);
